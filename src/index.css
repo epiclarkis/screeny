@@ -129,3 +129,31 @@ li {
   text-align: start;
   margin-left: 3rem;
 }
+
+@media only screen and (max-width: 400px) {
+
+  .creator {
+    display: block;
+    position: inherit;
+  }
+
+  .main {
+    grid-template-columns: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .part_one,
+  .part_two {
+    grid-column: 1/2;
+  }
+
+  .part_one {
+    border-right: none;
+  }
+
+  .btn_options {
+    margin-bottom: 1rem;
+  }
+
+}
