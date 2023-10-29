@@ -36,6 +36,10 @@ li {
   list-style-type: square;
 }
 
+.bot_logo {
+  width: 30px;
+}
+
 .nav h1 {
   text-align: left;
   padding-left: 3rem;
@@ -65,10 +69,6 @@ li {
 
 .part_one {
   border-right: 1px dashed #676767;
-}
-
-.part_two {
-  border-left: 1px dashed #676767;
 }
 
 .strategy {
