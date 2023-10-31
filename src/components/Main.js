@@ -10,6 +10,25 @@ create flows and response paths for the chatbot.</li>
                 </ol>
                 <h2>Part One - Answer</h2>
                 <p>The user may ask a question that falls under one of these three categories:</p>
+                <strong><p>&#128073; Learning-related that doesn&apos;t require troubleshooting, such as:</p></strong>
+                <ul>
+                    <li>Why can&apos;t I record on multiple screens?</li>
+                    <li>Why can I only record a screencast on one screen?</li>
+                    <li>Why is screen recording on multiple monitors not working?</li>
+                    <li>What are the best practices in recording on multiple monitors using Storyline?</li>
+                    <li>How many screens can I record using Storyline?</li>
+                    <li>How to record on multiple monitors using Storyline?</li>
+                    <li>How can I record a screencast on multiple monitors?</li>
+                    <li>How does screen recording work on multiple monitors?</li>
+                    <li>I can&apos;t record multiple screens using Storyline.</li>
+                    <li>I can&apos;t get Storyline to record on multiple screens.</li>
+                    <li>I need help recording on multiple screens using Storyline.</li>
+                    <li>I need assistance with screen recording on multiple monitors.</li>
+                    <li>I have multiple monitors, can I record a screencast using Storyline?</li>
+                    <li>Can't record using multiple monitors in Storyline.</li>
+                    <li>Can I record a screencast on multiple monitors using Storyline?</li>
+                    <li>Any recommended settings for recording on multiple monitors in Storyline?</li>
+                </ul>
                 <strong><p>&#128073; Problem-related that requires troubleshooting, such as:</p></strong>
                 <ul>
                     <li>Why does Storyline crash when recording on multiple screens?</li>
@@ -30,27 +49,7 @@ create flows and response paths for the chatbot.</li>
                     <li>Screen recording on multiple monitors is not working.</li>
                     <li>Storyline freezes/crashes when recording a screencast on multiple monitors.</li>
                 </ul>
-                <strong><p>&#128073; Learning-related that doesn&apos;t require troubleshooting, such as:</p></strong>
-                <ul>
-                    <li>Why can&apos;t I record on multiple screens?</li>
-                    <li>Why can I only record a screencast on one screen?</li>
-                    <li>Why is screen recording on multiple monitors not working?</li>
-                    <li>What are the best practices in recording on multiple monitors using Storyline?</li>
-                    <li>How to record multiple screens using Storyline?</li>
-                    <li>How many screens can I record using Storyline?</li>
-                    <li>How to record on multiple monitors using Storyline?</li>
-                    <li>How can I record a screencast on multiple monitors?</li>
-                    <li>How does screen recording work on multiple monitors?</li>
-                    <li>I can&apos;t record multiple screens using Storyline.</li>
-                    <li>I can&apos;t get Storyline to record on multiple screens.</li>
-                    <li>I need help recording on multiple screens using Storyline.</li>
-                    <li>I need assistance with screen recording on multiple monitors.</li>
-                    <li>I have multiple monitors, can I record a screencast using Storyline?</li>
-                    <li>Can't record using multiple monitors in Storyline.</li>
-                    <li>Can I record a screencast on multiple monitors using Storyline?</li>
-                    <li>Any recommended settings for recording on multiple monitors in Storyline?</li>
-                </ul>
-                <strong><p>&#128073; Unknown, or anything unrelated, such as:</p></strong>
+                <strong><p>&#128073; Unknown, or any unexpected use case, such as:</p></strong>
                 <ul>
                     <li>Need help.</li>
                     <li>Live agent.</li>
@@ -71,7 +70,7 @@ create flows and response paths for the chatbot.</li>
                 <div className="strategy">
                     <h3>Acknowledge</h3>
                     <ul>
-                        <li>We&apos;ll inform the user about the error.</li>
+                        <li>We&apos;ll acknowledge the failure, and inform the user about the error.</li>
                         <li>For example, telling the user we didn&apos;t understand their question.</li>
                     </ul>
                     <h3>Educate</h3>
@@ -82,11 +81,13 @@ create flows and response paths for the chatbot.</li>
                     <h3>Guide</h3>
                     <ul>
                         <li>We&apos;ll provide constructive advice and CTA to guide our user toward a resolution.</li>
+                        <li>Prevent the user from getting stuck in a loop by adding a limit to how many times they hit the fallback flow.</li>
+                        <li>For example, we&apos;ll hand them off to the support team when they hit the fallback flow three times in a row.</li>
                     </ul>
                 </div>
                 <h3>Creative Solution</h3>
                 <p>Whenever the user asks a question unrelated to screen recording on multiple monitors using Storyline, we&apos;ll redirect them to a Fallback flow. Our chatbot gives a Fallback Response to determine the next outcome.</p>
-                <p>For example, when the user says, “I want to upgrade my subscription,” it triggers a chatbot response to determine if the concern relates to screen recording or if they need help with something else.</p>
+                <p>For example, when the user says, “I want to upgrade my subscription,” it triggers a chatbot response to determine if the concern relates to screen recording on multiple monitors or if they need help with something else.</p>
                 <h3>Example:</h3>
                 <div className="chat">
                     <p><span className="user">user</span> I want to upgrade my subscription.</p>
@@ -98,8 +99,8 @@ create flows and response paths for the chatbot.</li>
                         <button className="btn_options">Multiple monitors</button>
                     </div>
                 </div>
-                <p>This way, we acknowledge and tell the user we didn&apos;t understand the question. Then, we educate them with our chatbot&apos;s limitations. But we don&apos;t leave them hanging; we gracefully guide them back on track through constructive advice and CTA.</p>
-                <p>Note: We&apos;ll provide a few variants of our chatbot&apos;s fallback response, served dynamically to make it sound less robotic.</p>
+                <p>This way, we acknowledge and tell the user we didn&apos;t understand the question. Then, we educate them with our chatbot&apos;s limitations. But we don&apos;t leave them hanging; we gracefully guide them back on track through constructive advice and CTA. And if the user hits the fallback flow for the third time in a row, we'll break the loop by redirecting them to support.</p>
+                <h3>Demo chatbot &#128073;</h3>
             </div>
         </div>
     );
