@@ -71,6 +71,11 @@ li {
   border-right: 1px dashed #676767;
 }
 
+.part_two,
+.part_one {
+  padding-bottom: 2rem;
+}
+
 .strategy {
   margin-left: 5rem;
   margin-bottom: 5rem;

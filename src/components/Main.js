@@ -100,7 +100,6 @@ create flows and response paths for the chatbot.</li>
                     </div>
                 </div>
                 <p>This way, we acknowledge and tell the user we didn&apos;t understand the question. Then, we educate them with our chatbot&apos;s limitations. But we don&apos;t leave them hanging; we gracefully guide them back on track through constructive advice and CTA. And if the user hits the fallback flow for the third time in a row, we'll break the loop by redirecting them to support.</p>
-                <h3>Demo chatbot &#128073;</h3>
             </div>
         </div>
     );
