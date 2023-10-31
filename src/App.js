@@ -2,6 +2,7 @@ import './App.css';
 import Main from './components/Main';
 import Flowmap from './components/Flowmap';
 import Nav from './components/Nav';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Nav />
       <Main />
       <Flowmap />
+      <Analytics />
     </div>
   );
 }
