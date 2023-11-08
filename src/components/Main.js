@@ -82,7 +82,7 @@ create flows and response paths for the chatbot.</li>
                     <ul>
                         <li>We&apos;ll provide constructive advice and CTA to guide our user toward a resolution.</li>
                         <li>Prevent the user from getting stuck in a loop by adding a limit to how many times they hit the fallback flow.</li>
-                        <li>For example, we&apos;ll hand them off to the support team when they hit the fallback flow three times in a row.</li>
+                        <li>For example, we&apos;ll hand them off to the support team when they hit the fallback flow twice in a row.</li>
                     </ul>
                 </div>
                 <h3>Creative Solution</h3>
@@ -99,7 +99,7 @@ create flows and response paths for the chatbot.</li>
                         <button className="btn_options">Multiple monitors</button>
                     </div>
                 </div>
-                <p>This way, we acknowledge and tell the user we didn&apos;t understand the question. Then, we educate them with our chatbot&apos;s limitations. But we don&apos;t leave them hanging; we gracefully guide them back on track through constructive advice and CTA. And if the user hits the fallback flow for the third time in a row, we'll break the loop by redirecting them to support.</p>
+                <p>This way, we acknowledge and tell the user we didn&apos;t understand the question. Then, we educate them with our chatbot&apos;s limitations. But we don&apos;t leave them hanging; we gracefully guide them back on track through constructive advice and CTA. And if the user hits the fallback flow twice in a row, we'll break the loop by redirecting them to support.</p>
             </div>
         </div>
     );
