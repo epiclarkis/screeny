@@ -57,7 +57,6 @@ create flows and response paths for the chatbot.</li>
                     <li>Speak with human.</li>
                     <li>I want to upgrade my subscription.</li>
                 </ul>
-                <h3>Flowmap &#128071;</h3>
             </div>
             <div className="part_two">
                 <h2>Part Two - Instructions</h2>
